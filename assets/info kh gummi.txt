@@ -1,0 +1,50 @@
+SECTION HEADER : 
+
+POLICE : KHGummi
+Bloc rectangulaire couleur : #3B72A9
+Logo Tic et Tac
+Deux Gummi Phones
+Textes : #56A2E0 GUMMI AIRLINES ACCUEIL PANIER CONTACT 
+Numéro et texte en dessous : #D95555 #F6EC84 01 80 41 86 42  Prix d’un appel local
+
+
+
+
+
+SLIDER ( penser à rename les fichiers pour + de clarté ) 
+2 fusées gummi rouges aux extrémités
+
+
+
+
+SECTION PRESENTATION DU SITE : 
+
+POLICE : KHMenu 
+Texte : #031536 Text align center
+
+Découvrez de nouveaux mondes !
+Montez à bord du vaisseau gummi afin de découvrir les différents mondes originaux de Kingdom Hearts avec Sora, Donald et Dingo !
+
+
+
+POLICE : Comic Hearts 	Fill : #FFFFFF 100%	Stroke : #000000 100%
+Image 1 : La Ville de Traverse ( Traverse Town ) + LOGO + 1360 Munny Stroke : 80%
+Image 2 : Le Jardin Radieux ( Radiant Garden ) + LOGO + 6385 Munny Stroke : 80%
+Image 3 : La Cité du Crépuscule ( Twilight Town ) + LOGO + 6380 Munny Stroke : 80%
+Image 4 : Scala Ad Caelum ( Scala Ad Caelum ) + LOGO + 2360 Munny Stroke : 80%
+Image 5 : Quadratum ( Quadratum ) + LOGO + 4410 Munny Stroke : 80%
+Image 6 : Le Monde Final ( The Final World ) + LOGO + 0 Munny Stroke : 80%
+
+
+
+SECTION BESOIN D'UN GUIDE : 
+
+Bloc rectangulaire : #DFF0FA
+Images : CHILL / FUN / DECOUVERTE / BALADES / PAYSAGES
+Créer un effet de flou sur les images quand on est pas en hover dessus
+
+
+
+
+
+ 

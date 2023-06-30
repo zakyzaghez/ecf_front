@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            box-sizing: border-box;
+            height: 100vh;
+            width: 100vw;
+            background: rgba(255, 0, 0, 0.164);
+            display: grid;
+            grid-auto-columns: 1fr;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+            grid-template-areas:
+                ". . . . . . . . . ."
+                ". C C C C C C C C ."
+                ". C C C C C C C C ."
+                ". C C C C C C C C ."
+                ". C C C C C C C C ."
+                ". C C C C C C C C ."
+                ". C C C C C C C C ."
+                ". . . . . . . . . .";
+        }
+
+        .container {
+            grid-area: C;
+            display: grid;
+            grid-gap: 30px 30px;
+            grid-template-columns: repeat(auto-fit, minmax(275px, calc(100%/3 - 30px)));
+            justify-items: center;
+            justify-content: center;
+        }
+
+
+        .card {
+            background: red;
+            display: grid;
+            grid-auto-columns: 1fr;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 0.5fr 0.3fr;
+            gap: 0px 0px;
+            grid-template-areas:
+                "img img img"
+                "img img img"
+                "titre-container titre-container logo1"
+                ". . lg-container";
+            height: 100%;
+        }
+
+        .img {
+            grid-area: img;
+            background: url(./images/TRAVERSETOWNIMAGE.png);
+            background-position: center;
+            height: 185px;
+            width: 290px;
+            border-radius: 25px;
+        }
+
+
+        .titre-container {
+
+            grid-area: titre-container;
+        }
+
+        .titre {
+            white-space: nowrap;
+            font-weight: 900;
+            font-size: 1em;
+            padding-top: 8px;
+        }
+
+        .sous-titre {
+            font-weight: 300;
+        }
+
+        .logo1 {
+            grid-area: logo1;
+            background: url(./images/LOGOTRAVERSETOWN.webp) center/contain no-repeat;
+            margin: 8px;
+        }
+
+        .lg-container {
+            grid-area: lg-container;
+            display: flex;
+            margin-left: 20px;
+            gap: 10px;
+        }
+
+        .logo2 {
+            height: 27px;
+            width: 27px;
+            background: url(./images/MUNNY.webp) center/contain no-repeat;
+        }
+
+        .prix {
+            margin: auto 0;
+            font-weight: 800;
+        }
+    </style>
+
+    <div class="container">
+
+
+        <div class="c1">
+            <div class="card">
+                <div class="img"></div>
+                <div class="titre-container">
+                    <h2 class="titre">La ville de traverse</h2>
+                    <h3 class="sous-titre">Traverse town</h3>
+                </div>
+                <div class="logo1"></div>
+                <div class="lg-container">
+                    <div class="prix"> 55656</div>
+                    <div class="logo2"></div>
+                </div>
+            </div>
+        </div>
+        <div class="c2">
+            <div class="card">
+                <div class="img"></div>
+                <div class="titre-container">
+                    <h2 class="titre">La ville de traverse</h2>
+                    <h3 class="sous-titre">Traverse town</h3>
+                </div>
+                <div class="logo1"></div>
+                <div class="lg-container">
+                    <div class="prix"> 55656</div>
+                    <div class="logo2"></div>
+                </div>
+            </div>
+        </div>
+        <div class="c3">
+            <div class="card">
+                <div class="img"></div>
+                <div class="titre-container">
+                    <h2 class="titre">La ville de traverse</h2>
+                    <h3 class="sous-titre">Traverse town</h3>
+                </div>
+                <div class="logo1"></div>
+                <div class="lg-container">
+                    <div class="prix"> 55656</div>
+                    <div class="logo2"></div>
+                </div>
+            </div>
+        </div>
+        <div class="c4">
+            <div class="card">
+                <div class="img"></div>
+                <div class="titre-container">
+                    <h2 class="titre">La ville de traverse</h2>
+                    <h3 class="sous-titre">Traverse town</h3>
+                </div>
+                <div class="logo1"></div>
+                <div class="lg-container">
+                    <div class="prix"> 55656</div>
+                    <div class="logo2"></div>
+                </div>
+            </div>
+        </div>
+        <div class="c5">
+            <div class="card">
+                <div class="img"></div>
+                <div class="titre-container">
+                    <h2 class="titre">La ville de traverse</h2>
+                    <h3 class="sous-titre">Traverse town</h3>
+                </div>
+                <div class="logo1"></div>
+                <div class="lg-container">
+                    <div class="prix"> 55656</div>
+                    <div class="logo2"></div>
+                </div>
+            </div>
+        </div>
+        <div class="c6">
+            <div class="card">
+                <div class="img"></div>
+                <div class="titre-container">
+                    <h2 class="titre">La ville de traverse</h2>
+                    <h3 class="sous-titre">Traverse town</h3>
+                </div>
+                <div class="logo1"></div>
+                <div class="lg-container">
+                    <div class="prix"> 55656</div>
+                    <div class="logo2"></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,581 @@
+/* PARAMETRES GENERAUX */
+@font-face {
+    font-family: "ComicHearts";
+    src: url("./assets/polices/ComicHearts.otf");
+}
+
+
+@font-face {
+    font-family: "KHGummi";
+    src: url("./assets/polices/KHGummi.otf");
+}
+
+@font-face {
+    font-family: "KHMenu";
+    src: url("./assets/polices/KHMenu.otf");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    box-sizing: content-box;
+    overflow-x: hidden;
+
+}
+
+/* NAVBAR */
+nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "nav-couronne-1 nav-logo-container nav-links-container nav-links-container nav-links-container nav-links-container nav-couronne-2"
+        "nav-couronne-1 nav-logo-container nav-links-container nav-links-container nav-links-container nav-links-container nav-couronne-2"
+        "nav-couronne-1 nav-logo-container nav-links-container nav-links-container nav-links-container nav-links-container nav-couronne-2";
+    height: 250px;
+    background-color: #3B72A9;
+}
+
+.nav-couronne-1 {
+    grid-area: nav-couronne-1;
+    width: 135px;
+    position: absolute;
+    left: 0;
+    margin: 35px 0;
+}
+
+.nav-couronne-2 {
+    grid-area: nav-couronne-2;
+    width: 135px;
+    position: absolute;
+    right: 0;
+    transform: rotate(180deg);
+    margin: 35px 0;
+}
+
+.nav-logo-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "nav-logo nav-logo nav-logo"
+        "nav-logo nav-logo nav-logo"
+        "nav-logo-texte nav-logo-texte nav-logo-texte";
+    grid-area: nav-logo-container;
+    align-items: center;
+}
+
+.nav-logo {
+    grid-area: nav-logo;
+    width: clamp(50px, 150px, 300px);
+    margin: auto;
+}
+
+.nav-logo-texte {
+    grid-area: nav-logo-texte;
+}
+
+.nav-logo-texte,
+.nav-link {
+    text-decoration: none;
+    font-family: "KHGummi";
+    color: #56A2E0;
+    text-align: center;
+    font-size: 25px;
+    margin: auto;
+}
+
+.nav-links-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+        ". . nav-contact-container"
+        "nav-accueil nav-panier nav-contact"
+        ". . .";
+    grid-area: nav-links-container;
+}
+
+.nav-accueil {
+    grid-area: nav-accueil;
+}
+
+.nav-panier {
+    grid-area: nav-panier;
+}
+
+.nav-contact-container {
+    position: absolute;
+    right: 175px;
+    top: 25px;
+}
+
+.nav-contact {
+    grid-area: nav-contact;
+}
+
+.nav-num {
+    font-family: "KHGummi";
+    color: #D95555;
+    font-size: 1.8em;
+}
+
+.nav-num-texte {
+    font-family: "KHGummi";
+    color: #F6EC84;
+    font-size: 0.8em;
+}
+
+/* NAV & DIAPO & CARTE H1 MEDIA QUERY  */
+
+@media screen and (max-width: 1024px) {
+
+    nav {
+        height: 215px;
+    }
+
+    .nav-couronne-1,
+    .nav-couronne-2 {
+        width: 125px;
+        margin: 20px 0;
+    }
+
+    .nav-logo {
+        width: clamp(50px, 125px, 300px);
+    }
+
+    .nav-logo-texte,
+    .nav-link {
+        font-size: 20px;
+    }
+
+    .nav-contact-container {
+        top: 50px;
+    }
+
+    .nav-num {
+        font-size: 1.4em;
+    }
+
+    .nav-num-texte {
+        font-size: 0.6em;
+    }
+
+    .diapo {
+        top: 215px !important;
+        height: 215px !important;
+    }
+
+    .carte-h1 {
+        margin-top: 265px !important;
+    }
+}
+
+
+@media screen and (max-width: 810px) {
+
+    nav {
+        height: 150px;
+    }
+
+    .nav-couronne-1,
+    .nav-couronne-2 {
+        width: 85px;
+        margin: 16px 0;
+    }
+
+    .nav-logo {
+        width: clamp(50px, 105px, 300px);
+    }
+
+    .nav-logo-texte,
+    .nav-link {
+        font-size: 14px;
+    }
+
+    .nav-contact-container {
+        top: 22px;
+        right: 120px;
+    }
+
+    .nav-num {
+        font-size: 1.1em;
+    }
+
+    .diapo {
+        top: 150px !important;
+        height: 150px !important;
+    }
+
+    .carte-h1 {
+        margin-top: 200px !important;
+    }
+
+}
+
+
+@media screen and (max-width: 590px) {
+
+    nav {
+        height: 125px;
+    }
+
+    .nav-couronne-1,
+    .nav-couronne-2 {
+        width: 65px;
+        margin: 18px 0;
+    }
+
+    .nav-logo {
+        width: clamp(50px, 85px, 300px);
+    }
+
+    .nav-logo-texte,
+    .nav-link {
+        font-size: 12px;
+    }
+
+    .nav-contact-container {
+        top: 15px;
+        right: 90px;
+    }
+
+    .nav-num {
+        font-size: 0.9em;
+    }
+
+    .diapo {
+        top: 125px !important;
+        height: 125px !important;
+    }
+
+    .carte-h1 {
+        margin-top: 175px !important;
+    }
+}
+
+
+@media screen and (max-width: 425px) {
+
+
+
+    .nav-couronne-1,
+    .nav-couronne-2 {
+        width: 50px;
+        margin: 35px 0;
+    }
+
+    .nav-logo {
+        width: clamp(50px, 85px, 300px);
+    }
+
+    .nav-logo-texte,
+    .nav-link {
+        font-size: 10px;
+    }
+
+    .nav-logo-texte {
+        font-size: 9px;
+    }
+
+    .nav-contact-container {
+        top: 18px;
+        right: 70px;
+    }
+
+    .nav-num {
+        font-size: 1em;
+    }
+
+    .nav-num-texte {
+        font-size: 0.5em;
+    }
+}
+
+
+/* SLIDER */
+
+/* Styles pour la section slider */
+.diapo {
+    height: 300px;
+    position: absolute;
+    top: 250px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    box-shadow: inset 8000px 4px 4px rgba(0, 0, 255, 0.1);
+    width: 100%;
+    clear: both;
+    display: block;
+    object-fit: contain;
+}
+
+/* CARTES */
+
+.carte-h1,
+.carte-h2 {
+    margin-top: 350px;
+    font-family: "KHMenu";
+    text-align: center;
+    color: #031536;
+    font-weight: 500;
+    white-space: nowrap;
+    font-size: clamp(1.4rem, 2.35vw, 4.05rem);
+}
+
+.carte-h2 {
+    margin-top: 0;
+    white-space: wrap;
+    margin: 3% 10% !important;
+    font-size: clamp(1.10rem, 2.2vw, 2.1rem);
+
+}
+
+.carte-container {
+    box-sizing: border-box;
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+        ". . . . . . . . . ."
+        ". C C C C C C C C ."
+        ". C C C C C C C C ."
+        ". C C C C C C C C ."
+        ". C C C C C C C C ."
+        ". C C C C C C C C ."
+        ". C C C C C C C C ."
+        ". . . . . . . . . .";
+}
+
+.container {
+    grid-area: C;
+    display: grid;
+    grid-gap: 25px 64px;
+    grid-template-columns: repeat(auto-fit, minmax(275px, calc(100%/3 - 64px)));
+    justify-items: center;
+    justify-content: center;
+}
+
+
+.card {
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-template-columns: 1.5fr 1.5fr 1.5fr;
+    grid-template-rows: 1fr 1fr 0.5fr 0.3fr;
+    grid-template-areas:
+        "img img img"
+        "img img img"
+        "titre-container titre-container logo1"
+        ". lg-container lg-container";
+    height: 92%;
+}
+
+
+
+.img {
+    grid-area: img;
+    height: 185px;
+    width: 325px;
+    border-radius: 25px;
+}
+
+/* CARTE 1 */
+.carte-container .container .c1 .card .img {
+    background: url(./assets/images/TRAVERSETOWNIMAGE.png) center/cover;
+}
+
+.carte-container .container .c1 .card .logo1 {
+    background: url(./assets/images/LOGOTRAVERSETOWN.webp) center/contain no-repeat;
+}
+
+/* CARTE 2 */
+.carte-container .container .c2 .card .img {
+    background: url(./assets/images/HOLLOWBASTION.jpg) center/cover;
+}
+
+.carte-container .container .c2 .card .logo1 {
+    background: url(./assets/images/LOGORADIANTGARDEN.webp) center/contain no-repeat;
+}
+
+/* CARTE 3 */
+.carte-container .container .c3 .card .img {
+    background: url(./assets/images/TWILIGHTTOWNIMAGE.webp) center/cover;
+}
+
+.carte-container .container .c3 .card .logo1 {
+    background: url(./assets/images/LOGOTWILIGHTTOWN.webp) center/contain no-repeat;
+}
+
+/* CARTE 4 */
+.carte-container .container .c4 .card .img {
+    background: url(./assets/images/image5slider.jpg) center/cover;
+}
+
+.carte-container .container .c4 .card .logo1 {
+    background: url(./assets/images/SCALAADCAELUMLOGO.webp) center/contain no-repeat;
+}
+
+/* CARTE 5 */
+.carte-container .container .c5 .card .img {
+    background: url(./assets/images/QUADRATUMIMAGE.avif) center/cover;
+}
+
+.carte-container .container .c5 .card .logo1 {
+    background: url(./assets/images/LOGOKH4.webp) center/contain no-repeat;
+}
+
+/* CARTE 6 */
+.carte-container .container .c6 .card .img {
+    background: url(./assets/images/IMAGEFINALWORLD.png) center/cover;
+}
+
+.carte-container .container .c6 .card .logo1 {
+    background: url(./assets/images/FINALWORLDLOGO.webp) center/contain no-repeat;
+}
+
+
+.titre-container {
+    grid-area: titre-container;
+}
+
+.titre {
+    white-space: nowrap;
+    font-size: 1.52em;
+    padding-top: 8px;
+    font-family: "ComicHearts";
+    -webkit-text-stroke: 1px rgb(0, 0, 0);
+    color: transparent;
+    font-weight: lighter;
+}
+
+.sous-titre {
+    font-family: "ComicHearts";
+    -webkit-text-stroke: 1px rgb(0, 0, 0);
+    color: transparent;
+    font-weight: lighter;
+    font-size: 1.25em;
+}
+
+.logo1 {
+    grid-area: logo1;
+    background: url(./images/LOGOTRAVERSETOWN.webp) center/contain no-repeat;
+    margin: 2px;
+}
+
+.lg-container {
+    grid-area: lg-container;
+    display: flex;
+    margin-left: 85px;
+    margin-bottom: 10px;
+    gap: 10px;
+}
+
+.logo2 {
+    height: 65px;
+    width: 50px;
+    background: url(./assets/images/MUNNY.webp) center/contain no-repeat;
+}
+
+.prix {
+    margin: auto 0;
+    font-family: "ComicHearts";
+    -webkit-text-stroke: 1px rgb(0, 0, 0);
+    color: transparent;
+    font-weight: 1;
+    font-size: 1.25em;
+}
+
+/* GUIDE */
+
+.guide-container {
+    background: #DFF0FA;
+    height: auto;
+    width: 100%;
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-template-columns: 0.5fr 1fr 1fr 1fr 0.5fr;
+    grid-template-rows: 0.3fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+        ". guide-h1 guide-h1 guide-h1 ."
+        ". guide-gride-container guide-gride-container guide-grid-container ."
+        ". guide-gride-container guide-gride-container guide-grid-container .";
+        padding-bottom: 100px;
+}
+
+.guide-h1 {
+    grid-area: guide-h1;
+    font-family: "KHMenu";
+    text-align: center;
+    white-space: nowrap;
+    font-size: clamp(1.95rem, 2.90vw, 4.6rem);
+    -webkit-text-stroke: 1px rgb(0, 0, 0);
+    color: white;
+    font-weight: 1;
+}
+
+.guide-grid-container {
+    grid-area: guide-gride-container;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 50px 30px;
+    grid-template-areas:
+        "guide-img-1 guide-img-3 guide-img-4"
+        "guide-img-2 guide-img-3 guide-img-5";
+    height: 500px;
+    width: 150%;
+}
+
+.guide-img-1 {
+    grid-area: guide-img-1;
+    background: url(./assets/images/CHILL.PNG) center/cover no-repeat;
+}
+
+.guide-img-2 {
+    grid-area: guide-img-2;
+    background: url(./assets/images/FUN.PNG) center/cover no-repeat;
+}
+
+.guide-img-3 {
+    grid-area: guide-img-3;
+    background: url(./assets/images/DECOUVERTE.PNG) center/cover no-repeat;
+}
+
+.guide-img-4 {
+    grid-area: guide-img-4;
+    background: url(./assets/images/BALADES.PNG) center/cover no-repeat;
+}
+
+.guide-img-5 {
+    grid-area: guide-img-5;
+    background: url(./assets/images/PAYSAGES.PNG) center/cover no-repeat;
+}
+
+
+
+@media screen and (max-width: 1191px) {
+    .guide-container {
+        margin-top: 460px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .guide-container {
+        margin-top: 1400px;
+    }
+}
